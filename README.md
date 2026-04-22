@@ -1,4 +1,4 @@
-# AI-103 Study Guide  ## Microsoft Certified: Azure AI Apps and Agents Developer Associate
+# AI-103 Study Guide  ## Microsoft Certified: Azure AI Apps and Agents
 
 This repository is a structured, exam‑aligned study guide for **Exam AI‑103**. It is designed for **Azure AI developers** who build, manage, and deploy AI applications and agents on Azure using **Microsoft Foundry** and the **Microsoft Agent Framework**.
 

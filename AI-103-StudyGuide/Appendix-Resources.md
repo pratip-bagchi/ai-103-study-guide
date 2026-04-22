@@ -6,7 +6,7 @@
 
 ## Mind Map: Building AI Apps and Agents on Azure
 
-![Alt Text](./images/ai-103-mindmap.png)
+![Mind Map](./images/ai-103-mindmap.png)
 
 > [!NOTE]
 > *This mind map is a conceptual visualization created for this guide. It is not part of official Microsoft documentation. Start from **Plan** (left), move to **Build** (center), then **Operate** (right). The platform components at the bottom are the building blocks you draw from at every stage.*

@@ -10,6 +10,8 @@ The content is organized by exam domain, includes practical guidance and example
 
 The AI‑103 exam validates your ability to design, build, and operate AI solutions and agents on Azure. The exam is domain‑based, and this repository mirrors that structure.
 
+![overview](./AI-103-StudyGuide/images/HTML-preview.png)
+
 ### Chapters
 
 - **Chapter 1 – Plan and Manage an Azure AI Solution (25–30%)**  

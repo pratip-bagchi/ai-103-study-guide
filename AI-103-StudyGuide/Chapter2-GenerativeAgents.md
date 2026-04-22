@@ -2,13 +2,13 @@
 
 # Chapter 2: Implement Generative AI and Agentic Solutions (30–35%)
 
-This is the **largest and most heavily weighted** exam domain at **30–35%** of total questions【9†L60-L66】. It covers building LLM-powered applications, constructing intelligent agents, multi-agent orchestration, and optimization techniques.
+This is the **largest and most heavily weighted** exam domain at **30–35%** of total questions. It covers building LLM-powered applications, constructing intelligent agents, multi-agent orchestration, and optimization techniques.
 
 ---
 
 ## 2.1 Build Generative Applications by Using Foundry
 
-**Exam Skills Mapped**【9†L98-L106】:
+**Exam Skills Mapped**:
 - Deploy and consume LLMs, small models, code models, and multimodal models
 - Implement retrieval-augmented generation (RAG) in an application
 - Design workflows, tool-augmented flows, and multi-step reasoning pipelines
@@ -25,25 +25,25 @@ RAG is a core pattern tested on this exam. The workflow:
 3. **Construct a prompt** combining retrieved content with the user's question
 4. **Generate** an answer grounded in the retrieved context
 
-LP1 Module 5 ("Optimize generative AI model performance with Microsoft Foundry", 2 hr 11 min, 8 units)【18†L94-L100】 covers prompt engineering, grounding with RAG, and fine-tuning as complementary strategies — and when to combine these approaches.
+LP1 Module 5 ("Optimize generative AI model performance with Microsoft Foundry", 2 hr 11 min, 8 units) covers prompt engineering, grounding with RAG, and fine-tuning as complementary strategies — and when to combine these approaches.
 
 ### Tool-Augmented Flows
 
-Through **function calling**, an LLM returns structured JSON specifying which function to invoke and with what parameters. This enables integration of APIs, databases, and custom logic into generative workflows. LP1 Module 4 ("Develop generative AI apps that use tools", 1 hr, 9 units)【18†L82-L88】 covers this pattern.
+Through **function calling**, an LLM returns structured JSON specifying which function to invoke and with what parameters. This enables integration of APIs, databases, and custom logic into generative workflows. LP1 Module 4 ("Develop generative AI apps that use tools", 1 hr, 9 units) covers this pattern.
 
 ### Evaluation
 
-The exam expects the ability to detect **fabrications** (hallucinations), measure **relevance** and **quality**, and check **safety** of outputs【9†L103】. Foundry provides evaluation capabilities through its Control Plane, including evaluators for agentic workflows【12†L34-L40】.
+The exam expects the ability to detect **fabrications** (hallucinations), measure **relevance** and **quality**, and check **safety** of outputs. Foundry provides evaluation capabilities through its Control Plane, including evaluators for agentic workflows.
 
 ### Application Integration
 
-To connect an application to a Foundry project, use the **unified project client** (`azure-ai-projects` 2.x) against a single project endpoint【13†L41】. Authentication uses Azure AD (via `DefaultAzureCredential` or `ManagedIdentityCredential`). Foundry SDKs are available for **Python, C#, JavaScript/TypeScript (preview), and Java (preview)**【13†L72-L75】.
+To connect an application to a Foundry project, use the **unified project client** (`azure-ai-projects` 2.x) against a single project endpoint. Authentication uses Azure AD (via `DefaultAzureCredential` or `ManagedIdentityCredential`). Foundry SDKs are available for **Python, C#, JavaScript/TypeScript (preview), and Java (preview)**.
 
 ---
 
 ## 2.2 Build Agents by Using Foundry
 
-**Exam Skills Mapped**【9†L107-L115】:
+**Exam Skills Mapped**:
 - Define agent roles, goals, conversation-tracking approach, and tool schemas
 - Build agents that integrate retrieval, function-calling, and conversation memory
 - Integrate agent tools (APIs, knowledge stores, search, content understanding, custom functions)
@@ -53,7 +53,7 @@ To connect an application to a Foundry project, use the **unified project client
 
 ### Agent Definition
 
-Every agent starts with a clear **role** (via system instructions), a **goal** (the task to accomplish), and a **conversation-tracking approach** (how context is maintained)【9†L109】:
+Every agent starts with a clear **role** (via system instructions), a **goal** (the task to accomplish), and a **conversation-tracking approach** (how context is maintained):
 
 ```python
 from agent_framework import Agent
@@ -72,23 +72,23 @@ agent = Agent(
 )
 ```
 
-This pattern comes from the official Microsoft Agent Framework samples【42†L151】.
+This pattern comes from the official Microsoft Agent Framework samples.
 
 ### Tool Integration
 
-Agents integrate tools through multiple mechanisms【9†L111】:
+Agents integrate tools through multiple mechanisms:
 
-- **APIs** — REST endpoints auto-imported via OpenAPI specs【17†L70】
+- **APIs** — REST endpoints auto-imported via OpenAPI specs
 - **Knowledge stores** — Azure AI Search indexes, Foundry IQ
 - **Content Understanding** — Multimodal analysis capabilities
 - **Custom functions** — Any Python function wrapped as an `AIFunction`
-- **MCP servers** — Dynamically discover and invoke external tools or data via Model Context Protocol【17†L68】
+- **MCP servers** — Dynamically discover and invoke external tools or data via Model Context Protocol
 
-Dedicated learning modules cover each integration type: **custom tools** (LP2 Module 2, 53 min)【19†L48-L54】, **MCP tools** (LP2 Module 3, 51 min)【19†L60-L66】, and **Foundry IQ knowledge** (LP2 Module 4, 1 hr 11 min — covering how RAG solves the knowledge problem for agents and how Foundry IQ provides a shared knowledge platform)【19†L72-L78】.
+Dedicated learning modules cover each integration type: **custom tools** (LP2 Module 2, 53 min), **MCP tools** (LP2 Module 3, 51 min), and **Foundry IQ knowledge** (LP2 Module 4, 1 hr 11 min — covering how RAG solves the knowledge problem for agents and how Foundry IQ provides a shared knowledge platform).
 
 ### Agent Publishing
 
-Foundry supports publishing agents to **Microsoft Teams and Microsoft 365 Copilot**, accessing workplace data with Work IQ, and testing integrated agents (LP2 Module 5, 1 hr 14 min, 9 units)【19†L84-L90】.
+Foundry supports publishing agents to **Microsoft Teams and Microsoft 365 Copilot**, accessing workplace data with Work IQ, and testing integrated agents (LP2 Module 5, 1 hr 14 min, 9 units).
 
 ### Autonomous vs. Semiautonomous Workflows
 
@@ -102,7 +102,7 @@ Safeguards for agent behavior include:
 
 ## 2.3 Optimize and Operationalize Generative AI Systems
 
-**Exam Skills Mapped**【9†L116-L122】:
+**Exam Skills Mapped**:
 - Tune generation behavior (prompt engineering and adjusting model parameters)
 - Implement model reflection, chain-of-thought evaluations, and self-critique loops
 - Set up observability by implementing tracing, token analytics, safety signals, and latency breakdowns
@@ -119,9 +119,9 @@ Key parameters:
 
 ### Fine-Tuning in Foundry
 
-Fine-tuning improves results beyond prompt engineering, particularly for domain-specific behavior, shorter prompts (token savings), and lower-latency inference from smaller models【39†L18-L24】. Foundry uses **LoRA (Low-Rank Adaptation)** for efficient fine-tuning【39†L27】.
+Fine-tuning improves results beyond prompt engineering, particularly for domain-specific behavior, shorter prompts (token savings), and lower-latency inference from smaller models. Foundry uses **LoRA (Low-Rank Adaptation)** for efficient fine-tuning.
 
-**Supported fine-tuning models**【39†L50-L63】:
+**Supported fine-tuning models**:
 
 | **Model ID** | **Methods** | **Status** | **Modality** |
 | --- | --- | --- | --- |
@@ -137,11 +137,11 @@ Fine-tuning improves results beyond prompt engineering, particularly for domain-
 | `Llama-3.3-70B-Instruct` | SFT | Public preview | Text to text |
 | `gpt-oss-20b` | SFT | Public preview | Text to text |
 
-Training data must be formatted as **JSON Lines (JSONL)** in the Chat Completions conversational format, encoded in **UTF-8 with a byte-order mark (BOM)**, and each file must be **less than 512 MB**【39†L74-L76】.
+Training data must be formatted as **JSON Lines (JSONL)** in the Chat Completions conversational format, encoded in **UTF-8 with a byte-order mark (BOM)**, and each file must be **less than 512 MB**.
 
 ### Model Reflection and Self-Critique
 
-Advanced techniques for improving output quality【9†L119】:
+Advanced techniques for improving output quality:
 
 - **Chain-of-thought prompting:** Instruct the model to reason step by step, making errors more visible and correctable
 - **Self-reflection:** Prompt the model to check its own answer: *"Verify your response for correctness and completeness before finalizing."*
@@ -152,33 +152,33 @@ Advanced techniques for improving output quality【9†L119】:
 
 ### Hybrid LLM + Rules Engines
 
-Use LLMs for understanding intent and generating natural language; delegate deterministic tasks (math, database lookups, structured validation) to traditional code or APIs【9†L121】. This combination improves reliability, reduces cost, and avoids hallucination where precision is required. The exam may present scenarios where a purely AI solution is suboptimal, expecting you to incorporate a deterministic component.
+Use LLMs for understanding intent and generating natural language; delegate deterministic tasks (math, database lookups, structured validation) to traditional code or APIs. This combination improves reliability, reduces cost, and avoids hallucination where precision is required. The exam may present scenarios where a purely AI solution is suboptimal, expecting you to incorporate a deterministic component.
 
 ---
 
 ## 2.4 Agent Orchestration Patterns — Deep Dive
 
-The **Microsoft Agent Framework** provides five multi-agent orchestration patterns【16†L49-L57】【17†L81-L85】. Implementing orchestrated multi-agent solutions is explicitly tested on the exam【9†L112】.
+The **Microsoft Agent Framework** provides five multi-agent orchestration patterns. Implementing orchestrated multi-agent solutions is explicitly tested on the exam.
 
 ---
 
 ### Pattern 1: Sequential Orchestration — *"Assembly Line"*
 
-**What it is:** Agents are organized in a pipeline. Each agent processes the task in turn, passing its output to the next. The full conversation history from previous agents is passed to each subsequent agent【26†L16】【26†L20】.
+**What it is:** Agents are organized in a pipeline. Each agent processes the task in turn, passing its output to the next. The full conversation history from previous agents is passed to each subsequent agent.
 
-**When to use it:** Tasks that break into clear ordered stages — document review, data processing pipelines, or multi-stage reasoning【26†L16】.
+**When to use it:** Tasks that break into clear ordered stages — document review, data processing pipelines, or multi-stage reasoning.
 
 > [!NOTE]
 > *Analogy (conceptual — not from official docs): An assembly line where each station adds something new to the product.*
 
-**What you'll learn** (per official docs)【26†L24-L28】:
+**What you'll learn** (per official docs):
 - Create a sequential pipeline of agents
 - Chain agents where each builds upon previous output
 - Add human-in-the-loop approval for sensitive tool calls
 - Mix agents with custom executors for specialized tasks
 - Track conversation flow through the pipeline
 
-**Python example** (from the official Agent Framework repository)【42†L151】:
+**Python example** (from the official Agent Framework repository):
 
 ```python
 import asyncio, os
@@ -221,14 +221,14 @@ if __name__ == "__main__":
 
 ### Pattern 2: Concurrent Orchestration — *"Team in Parallel"*
 
-**What it is:** Multiple agents work on the same task **in parallel**. Each processes the input independently, and their results are collected and aggregated【28†L18】.
+**What it is:** Multiple agents work on the same task **in parallel**. Each processes the input independently, and their results are collected and aggregated.
 
-**When to use it:** Diverse perspectives, brainstorming, ensemble reasoning, or voting systems【28†L18】.
+**When to use it:** Diverse perspectives, brainstorming, ensemble reasoning, or voting systems.
 
 > [!NOTE]
 > *Analogy (conceptual): A panel of experts working simultaneously on the same question, then comparing answers.*
 
-**What you'll learn**【28†L22-L24】:
+**What you'll learn**:
 - Define multiple agents with different expertise
 - Orchestrate agents to work concurrently on a single task
 - Collect and process aggregated results
@@ -255,14 +255,14 @@ async for event in workflow.run("Hello, how are you today?", stream=True):
 
 ### Pattern 3: Handoff Orchestration — *"Expert Routing"*
 
-**What it is:** Agents transfer control to one another based on context. Internally uses a **mesh topology** where agents connect directly without a central orchestrator【27†L18】【27†L20】.
+**What it is:** Agents transfer control to one another based on context. Internally uses a **mesh topology** where agents connect directly without a central orchestrator.
 
-**When to use it:** Customer support (general → specialist), expert systems, dynamic delegation【27†L18】.
+**When to use it:** Customer support (general → specialist), expert systems, dynamic delegation.
 
 > [!NOTE]
 > *Analogy (conceptual): A call center where a customer is transferred from a general agent to a billing specialist.*
 
-**Key differences from Agent-as-Tools** (important for the exam)【27†L30-L32】:
+**Key differences from Agent-as-Tools** (important for the exam):
 
 | **Dimension** | **Handoff** | **Agent-as-Tools** |
 | --- | --- | --- |
@@ -270,7 +270,7 @@ async for event in workflow.run("Hello, how are you today?", stream=True):
 | **Task Ownership** | Receiving agent takes **full ownership** | Primary agent retains **overall responsibility** |
 | **Context Management** | Full conversation handed over entirely | Primary agent manages context; provides only relevant info |
 
-**What you'll learn**【27†L36-L41】:
+**What you'll learn**:
 - Create specialized agents for different domains
 - Configure handoff rules between agents
 - Build interactive workflows with dynamic agent routing
@@ -279,25 +279,25 @@ async for event in workflow.run("Hello, how are you today?", stream=True):
 - Use checkpointing for durable handoff workflows
 
 > [!IMPORTANT]
-> Handoff orchestration only supports `Agent` types and agents must support local tool execution【27†L24】.
+> Handoff orchestration only supports `Agent` types and agents must support local tool execution.
 
 ---
 
 ### Pattern 4: Group Chat Orchestration — *"Roundtable Discussion"*
 
-**What it is:** Multiple agents in a collaborative conversation, coordinated by an **orchestrator** that determines speaker selection and conversation flow. Internally uses a **star topology** with an orchestrator in the middle【32†L16-L18】.
+**What it is:** Multiple agents in a collaborative conversation, coordinated by an **orchestrator** that determines speaker selection and conversation flow. Internally uses a **star topology** with an orchestrator in the middle.
 
-**When to use it:** Iterative refinement, collaborative problem-solving, multi-perspective analysis【32†L16】.
+**When to use it:** Iterative refinement, collaborative problem-solving, multi-perspective analysis.
 
-**Key differences from other patterns**【32†L24-L27】:
+**Key differences from other patterns**:
 - **Centralized Coordination:** Uses an orchestrator (unlike handoff's direct transfers)
 - **Iterative Refinement:** Agents review and build on each other's responses across multiple rounds
 - **Flexible Speaker Selection:** Round-robin, prompt-based, or custom logic
 - **Shared Context:** All agents see the full conversation history
 
-**Two speaker selection approaches** (mutually exclusive — use one or the other, not both)【46†L19】:
+**Two speaker selection approaches** (mutually exclusive — use one or the other, not both):
 
-*Pattern A — Function-based selection*【46†L37-L53】:
+*Pattern A — Function-based selection*:
 
 ```python
 from agent_framework import GroupChatBuilder, GroupChatStateSnapshot
@@ -318,7 +318,7 @@ workflow = (
 )
 ```
 
-*Pattern B — LLM-based manager selection*【46†L81-L99】:
+*Pattern B — LLM-based manager selection*:
 
 ```python
 manager_agent = AzureOpenAIChatClient().create_agent(
@@ -335,20 +335,20 @@ workflow = (
 ```
 
 > [!WARNING]
-> Function-based and manager-based approaches are **mutually exclusive**. Using both will conflict【46†L19】.
+> Function-based and manager-based approaches are **mutually exclusive**. Using both will conflict.
 
 ---
 
 ### Pattern 5: Magentic Orchestration — *"Dynamic Manager"*
 
-**What it is:** A **manager agent** dynamically coordinates specialized agents (and sometimes humans) for complex, open-ended problems. The manager builds and refines a **dynamic task ledger**, assigning subtasks as needed【17†L85】【16†L57】.
+**What it is:** A **manager agent** dynamically coordinates specialized agents (and sometimes humans) for complex, open-ended problems. The manager builds and refines a **dynamic task ledger**, assigning subtasks as needed.
 
 **When to use it:** Very complex tasks with unknown sub-problems requiring dynamic planning and decomposition.
 
 > [!NOTE]
 > *Analogy (conceptual): A project manager who hires consultants on the fly — figuring out what needs to be done, bringing in specialists, and compiling their work dynamically.*
 
-**Status:** The Python `MagenticBuilder` is included in the `agent-framework-orchestrations` package. The .NET version will support Magentic in an upcoming release【16†L70】.
+**Status:** The Python `MagenticBuilder` is included in the `agent-framework-orchestrations` package. The .NET version will support Magentic in an upcoming release.
 
 ---
 
@@ -356,11 +356,11 @@ workflow = (
 
 | **Pattern** | **Topology** | **Communication** | **Best For** | **Exam Keyword** |
 | --- | --- | --- | --- | --- |
-| **Sequential**【26†L16】 | Pipeline | Linear; each sees full history | Multi-stage processing | *"pipeline, step-by-step"* |
-| **Concurrent**【28†L18】 | Fan-out/fan-in | Independent; results aggregated | Diverse perspectives | *"parallel, brainstorming"* |
-| **Handoff**【27†L18】 | Mesh (peer-to-peer) | Direct transfer of full context | Expert routing | *"escalation, specialist"* |
-| **Group Chat**【32†L16】 | Star (orchestrator center) | All see shared conversation | Iterative refinement | *"collaborative, roundtable"* |
-| **Magentic**【17†L85】 | Manager + workers | Manager assigns dynamically | Complex open-ended goals | *"dynamic planning, task ledger"* |
+| **Sequential** | Pipeline | Linear; each sees full history | Multi-stage processing | *"pipeline, step-by-step"* |
+| **Concurrent** | Fan-out/fan-in | Independent; results aggregated | Diverse perspectives | *"parallel, brainstorming"* |
+| **Handoff** | Mesh (peer-to-peer) | Direct transfer of full context | Expert routing | *"escalation, specialist"* |
+| **Group Chat** | Star (orchestrator center) | All see shared conversation | Iterative refinement | *"collaborative, roundtable"* |
+| **Magentic** | Manager + workers | Manager assigns dynamically | Complex open-ended goals | *"dynamic planning, task ledger"* |
 
 ---
 

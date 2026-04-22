@@ -2,13 +2,13 @@
 
 # Chapter 4: Implement Text Analysis Solutions (10–15%)
 
-This domain covers natural language processing using both Azure's prebuilt services and LLM-based approaches, plus speech capabilities. It accounts for **10–15%** of exam questions【9†L60-L66】.
+This domain covers natural language processing using both Azure's prebuilt services and LLM-based approaches, plus speech capabilities. It accounts for **10–15%** of exam questions.
 
 ---
 
 ## 4.1 Apply Language Model Text Analysis
 
-**Exam Skills Mapped**【9†L152-L158】:
+**Exam Skills Mapped**:
 - Implement solutions to extract entities, topics, summaries, and structured JSON outputs by using generative prompting and Foundry Tools
 - Configure detection of sentiment, tone, safety issues, and sensitive content
 - Build solutions that translate text using Azure Translator in Foundry Tools or LLM-powered translation flows
@@ -16,11 +16,11 @@ This domain covers natural language processing using both Azure's prebuilt servi
 
 ### Azure Language in Foundry Tools
 
-Pre-built NLP capabilities (LP3 Module 1: "Analyze text with Azure Language in Foundry Tools", 46 min, 8 units)【20†L45-L51】 include:
+Pre-built NLP capabilities (LP3 Module 1: "Analyze text with Azure Language in Foundry Tools", 46 min, 8 units) include:
 
-- **Language detection** — Identify the language of input text【20†L57】
-- **Entity extraction** — Find named entities (people, organizations, locations)【20†L58】
-- **PII recognition** — Detect personally identifiable information for redaction【20†L59】
+- **Language detection** — Identify the language of input text
+- **Entity extraction** — Find named entities (people, organizations, locations)
+- **PII recognition** — Detect personally identifiable information for redaction
 
 ### Prebuilt Tools vs. LLM-Based Analysis
 
@@ -37,14 +37,14 @@ Pre-built NLP capabilities (LP3 Module 1: "Analyze text with Azure Language in F
 
 ### MCP Integration for Text Analysis
 
-LP3 Module 2 ("Develop a text analysis agent with the Azure Language MCP server", 52 min, 6 units)【20†L66-L72】 teaches building an AI agent that uses the **Azure Language MCP server** to perform text analysis tasks like language detection, entity recognition, and personal information redaction — demonstrating how agents invoke Foundry Tools through the Model Context Protocol.
+LP3 Module 2 ("Develop a text analysis agent with the Azure Language MCP server", 52 min, 6 units) teaches building an AI agent that uses the **Azure Language MCP server** to perform text analysis tasks like language detection, entity recognition, and personal information redaction — demonstrating how agents invoke Foundry Tools through the Model Context Protocol.
 
 ### Translation
 
 - **Azure Translator** (Foundry Tool) — Broad language coverage and high accuracy for direct translation
-- **LLM-powered translation** — Better when translation must be combined with contextual rewriting or summarization in a single step【9†L156】
+- **LLM-powered translation** — Better when translation must be combined with contextual rewriting or summarization in a single step
 
-LP3 Module 7 ("Translate text and speech with Microsoft Foundry Tools", 48 min, 7 units)【20†L126-L132】 covers both approaches.
+LP3 Module 7 ("Translate text and speech with Microsoft Foundry Tools", 48 min, 7 units) covers both approaches.
 
 ### Customizing Outputs for Domain Tasks
 
@@ -57,7 +57,7 @@ For domain-specific extraction (e.g., compliance summarization, extracting chemi
 
 ## 4.2 Implement Speech Solutions
 
-**Exam Skills Mapped**【9†L159-L165】:
+**Exam Skills Mapped**:
 - Implement workflows to convert speech to text and text to speech for agentic interactions
 - Integrate speech as an agent modality, including custom speech models
 - Enable multimodal reasoning from audio inputs
@@ -69,18 +69,18 @@ LP3 Modules 3–6 cover the full speech capability set:
 
 | **Module** | **Focus** | **Duration** | **Units** |
 | --- | --- | --- | --- |
-| Develop a speech-capable generative AI application【20†L78-L84】 | Models that transcribe and synthesize speech | 43 min | 7 |
-| Create speech-enabled apps with Azure Speech【20†L90-L96】 | STT and TTS APIs | 53 min | 9 |
-| Develop a speech agent with the Azure Speech MCP server【20†L102-L108】 | Building agents with Speech MCP for STT/TTS | 52 min | 6 |
-| Develop an Azure Speech Voice Live Agent【20†L114-L120】 | Voice Live API and SDK for conversational agents | 52 min | 7 |
+| Develop a speech-capable generative AI application | Models that transcribe and synthesize speech | 43 min | 7 |
+| Create speech-enabled apps with Azure Speech | STT and TTS APIs | 53 min | 9 |
+| Develop a speech agent with the Azure Speech MCP server | Building agents with Speech MCP for STT/TTS | 52 min | 6 |
+| Develop an Azure Speech Voice Live Agent | Voice Live API and SDK for conversational agents | 52 min | 7 |
 
 ### Custom Speech Models
 
-**Custom speech models** improve recognition accuracy for domain-specific terms by training on specialized audio data or providing custom vocabulary lists【9†L162】. Use them when transcriptions frequently miss company-specific proper nouns, industry jargon, or accented speech patterns.
+**Custom speech models** improve recognition accuracy for domain-specific terms by training on specialized audio data or providing custom vocabulary lists. Use them when transcriptions frequently miss company-specific proper nouns, industry jargon, or accented speech patterns.
 
 ### Speech Translation Pipeline
 
-The standard pipeline: **Speech-to-Text → Azure Translator (or LLM) → Text-to-Speech**. Azure also provides a direct Speech Translation API. The exam explicitly states both LLM-powered and Foundry Tools approaches are in scope【9†L164】.
+The standard pipeline: **Speech-to-Text → Azure Translator (or LLM) → Text-to-Speech**. Azure also provides a direct Speech Translation API. The exam explicitly states both LLM-powered and Foundry Tools approaches are in scope.
 
 > [!NOTE]
 > *Direct LLM speech translation (audio in → text out in another language) is not available as a single end-to-end step. Speech must always be transcribed to text first (via STT), then processed by the LLM or Translator, then optionally synthesized back to speech (via TTS).*
